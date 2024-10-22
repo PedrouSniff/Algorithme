@@ -130,8 +130,124 @@ SI (n%2==0) ALORS
 		DEBUT_SINON
 		AFFICHER "FAUX"
 		FIN_SINON
-FIN_ALGORITHME
+FIN_ALGORITHME<
 
+Exo 7 : 
+
+FONCTIONS_UTILISEES
+VARIABLES
+x EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+x PREND_LA_VALEUR 0
+POUR x ALLANT_DE 1 A 20 
+   	DEBUT_POUR
+   	   SI (x%2==0) ALORS
+	     DEBUT_SI
+	     AFFICHER* x
+	     FIN_SI
+		FIN_POUR
+ FIN_ALGORITHME
+
+Exo 8 : 
+
+FONCTIONS_UTILISEES
+VARIABLES
+a EST_DU_TYPE NOMBRE
+b EST_DU_TYPE NOMBRE
+c EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+a PREND_LA_VALEUR 0
+b PREND_LA_VALEUR 0
+c PREND_LA_VALEUR 0
+LIRE b
+LIRE c
+b PREND_LA_VALEUR b*b
+c PREND_LA_VALEUR c*c
+a PREND_LA_VALEUR b+c
+a PREND_LA_VALEUR sqrt(a)
+AFFICHER a
+ FIN_ALGORITHME
+
+Exo 9 :
+
+FONCTIONS_UTILISEES
+VARIABLES
+n EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+n PREND_LA_VALEUR 0
+AFFICHER "Quelle heure est-il ?"
+Lire n
+SI (n>=0 ET n<12) ALORS
+	DEBUT_SI
+	   AFFICHER "Matin"
+	FIN_SI
+SI (n>=12 ET n<17) ALORS
+	DEBUT_SI
+		AFFICHER "Après-Midi"			
+  FIN_SI
+SI (n>=17 ET n<24) ALORS
+	DEBUT_SI
+		AFFICHER "Soir"
+	FIN_SI
+ FIN_ALGORITHME
+
+Exo 10 : 
+
+FONCTIONS_UTILISEES
+VARIABLES
+x EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+POUR x ALLANT_DE 1 A 100
+   	DEBUT_POUR
+   		  SI (x%3==0 ET x%5==0) ALORS
+   	       	DEBUT_SI
+   	       	   AFFICHER* "foobar"
+   	       	FIN_SI
+   	       	SINON
+   	       		 DEBUT_SINON
+   	       		     SI (x%5==0) ALORS
+   	       		     	DEBUT_SI
+   	       		     	   AFFICHER* "foo"
+   	       		     	FIN_SI
+   	      		     	SINON 
+   	       		     		DEBUT_SINON
+   	       		     		  SI (x%3==0) ALORS
+   	    	                 DEBUT_SI
+   	    	                    AFFICHER* "bar"
+   	    	                    SI (x) ALORS
+   	    	                 FIN_SI
+   	    	                 SINON
+   	    	                 	DEBUT_SINON
+   	    	                 	  AFFICHER* x
+   	    	                 	FIN_SINON
+   	       		     	 FIN_SINON
+   	       		  FIN_SINON
+   	FIN_POUR  
+ FIN_ALGORITHME
+
+Exo 11 : 
+
+FONCTIONS_UTILISEES
+VARIABLES
+x EST_DU_TYPE NOMBRE
+y EST_DU_TYPE NOMBRE
+z EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+x PREND_LA_VALEUR 0
+y PREND_LA_VALEUR 0
+z PREND_LA_VALEUR 0
+
+POUR x ALLANT_DE 0 A 9
+	DEBUT_POUR
+	    AFFICHER* " "
+	POUR y ALLANT_DE 0 A 10
+		DEBUT_POUR
+		    z PREND_LA_VALEUR y*x
+			  AFFICHER z
+				AFFICHER "	"
+		FIN_POUR 
+FIN_POUR
+FIN_ALGORITHME
 
 
 
